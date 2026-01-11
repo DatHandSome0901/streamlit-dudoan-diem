@@ -49,7 +49,7 @@ st.subheader("📝 Nhập thông tin học sinh")
 col1, col2 = st.columns(2)
 
 with col1:
-    studytime = st.text_input("Thời gian học mỗi tuần", "2")
+    studytime = st.text_input("Thời gian học mỗi tuần (1-4)", "2")
     failures = st.text_input("Số lần trượt môn", "0")
     G1 = st.text_input("Điểm kiểm tra kỳ 1", "10")
 
@@ -90,4 +90,5 @@ st.caption(
     "Hồi quy tuyến tính đa biến trên tập dữ liệu Student Performance Dataset."
 
 )
+
 
