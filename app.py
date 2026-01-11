@@ -51,11 +51,11 @@ col1, col2 = st.columns(2)
 with col1:
     studytime = st.text_input("Thời gian học mỗi tuần", "2")
     failures = st.text_input("Số lần trượt môn", "0")
-    G1 = st.text_input("Điểm kiểm tra kỳ 1 (G1)", "10")
+    G1 = st.text_input("Điểm kiểm tra kỳ 1", "10")
 
 with col2:
     absences = st.text_input("Số buổi nghỉ học", "5")
-    G2 = st.text_input("Điểm kiểm tra kỳ 2 (G2)", "10")
+    G2 = st.text_input("Điểm kiểm tra kỳ 2", "10")
 
 # ================== DỰ ĐOÁN ==================
 if st.button("🎯 DỰ ĐOÁN ĐIỂM CUỐI KỲ"):
@@ -77,7 +77,7 @@ if st.button("🎯 DỰ ĐOÁN ĐIỂM CUỐI KỲ"):
         prediction = model.predict(input_data)[0]
 
         st.success(
-            f"📌 **Điểm cuối kỳ dự đoán (G3): {prediction:.2f} / 20**"
+            f"📌 **Điểm cuối kỳ dự đoán: {prediction:.2f} / 20**"
         )
 
     except ValueError:
@@ -90,3 +90,4 @@ st.caption(
     "Hồi quy tuyến tính đa biến trên tập dữ liệu Student Performance Dataset."
 
 )
+
