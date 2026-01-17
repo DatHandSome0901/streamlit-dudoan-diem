@@ -77,7 +77,7 @@ if st.button("🎯 DỰ ĐOÁN ĐIỂM CUỐI KỲ"):
         prediction = model.predict(input_data)[0]
 
         st.success(
-            f"📌 **Điểm cuối kỳ dự đoán: {prediction:.2f} / 20**"
+            f"📌 **Điểm cuối kỳ dự đoán: {prediction:.2f}"
         )
 
     except ValueError:
@@ -90,5 +90,6 @@ st.caption(
     "Hồi quy tuyến tính đa biến trên tập dữ liệu Student Performance Dataset."
 
 )
+
 
 
